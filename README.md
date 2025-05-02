@@ -4,7 +4,7 @@ This is what I use to add srt subtitle files to directories full of video files.
 
 This is not well tested, just a quick and dirty setup for when I need to subtitle a bunch of things at once. 
 
-To use this you'll need Docker installed, CUDA setup, and have the [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html) configured for your enviornment.
+To use this you'll need Docker installed, and if you want hardware acceleration you'll also need CUDA set up, and have the [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html) configured for your enviornment.
 
 ## To Use ## 
 
