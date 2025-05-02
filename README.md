@@ -13,3 +13,13 @@ To use this you'll need Docker installed, CUDA setup, and have the [NVIDIA Conta
 1. `docker build -t transcribe .`
 1. Once that's built `cd` into the directory containing the video files you want subtitled
 1. `docker run --gpus all $(pwd):/whisper transcribe`
+
+## To Use Without an Nvidia card ##
+I haven't tested it but this should work ok on systems without an Nvidia GPU, it'll just be slower. To do that you essentially just need to remove the nvidia/cuda specific flags in the above steps:
+
+1. `git clone https://github.com/eldridgea/transcribe.git`
+1. `cd transcribe`
+1. Open `transcribe.sh` and delete `-hwaccel cuda` (currently line 3) and also delete `--device cuda` (currently line 7). Save the file.
+1. `docker build -t transcribe .`
+1. Once that's built `cd` into the directory containing the video files you want subtitled
+1. `docker run $(pwd):/whisper transcribe` 
